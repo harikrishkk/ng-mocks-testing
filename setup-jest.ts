@@ -1,4 +1,5 @@
 import 'jest-preset-angular/setup-jest';
+import { ngMocks } from 'ng-mocks';
 
 /* global mocks for jsdom */
 const mock = () => {
@@ -25,6 +26,8 @@ Object.defineProperty(document.body.style, 'transform', {
     };
   },
 });
+
+ngMocks.autoSpy('jest');
 
 /* output shorter and more meaningful Zone error stack traces */
 // Error.stackTraceLimit = 2;
