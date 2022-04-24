@@ -1,4 +1,6 @@
+import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  count$: Observable<number>;
+  constructor(private cartService: ShoppingCartService) { }
 
   ngOnInit() {
+    this.count$ = this.cartService.getCartCount$()
   }
 
 }

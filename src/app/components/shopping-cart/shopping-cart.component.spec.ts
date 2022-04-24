@@ -1,28 +1,15 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
 import { ShoppingCartComponent } from './shopping-cart.component';
+import { MockBuilder, MockRender } from 'ng-mocks';
+import { mockCart } from '../../mocks';
 
-describe('ShoppingCartComponent', () => {
-  let component: ShoppingCartComponent;
-  let fixture: ComponentFixture<ShoppingCartComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ShoppingCartComponent ]
-    })
-    .compileComponents();
-  }));
-
+describe('ShoppingCart', () => {
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShoppingCartComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    return MockBuilder(ShoppingCartComponent)
+  })
+  it('should be defined', () => {
+    const fixture = MockRender(ShoppingCartComponent, {
+      item: mockCart
+    });
+    expect(fixture.componentInstance).toBeDefined();
+  })
+})

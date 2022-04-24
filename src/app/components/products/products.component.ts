@@ -1,9 +1,10 @@
+import { Product } from './../../models/product.model';
 import { Cart } from './../../models/cart.model';
 import { ShoppingCartService } from './../../services/shopping-cart.service';
 import { Observable } from 'rxjs';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/product.model';
+
 
 @Component({
   selector: 'app-products',

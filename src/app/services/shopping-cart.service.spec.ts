@@ -1,16 +1,16 @@
-/* tslint:disable:no-unused-variable */
+// /* tslint:disable:no-unused-variable */
 
-import { TestBed, async, inject } from '@angular/core/testing';
-import { ShoppingCartService } from './shopping-cart.service';
+// import { TestBed, async, inject } from '@angular/core/testing';
+// import { ShoppingCartService } from './shopping-cart.service';
 
-describe('Service: ShoppingCart', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [ShoppingCartService]
-    });
-  });
+// describe('Service: ShoppingCart', () => {
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({
+//       providers: [ShoppingCartService]
+//     });
+//   });
 
-  it('should ...', inject([ShoppingCartService], (service: ShoppingCartService) => {
-    expect(service).toBeTruthy();
-  }));
-});
+//   it('should ...', inject([ShoppingCartService], (service: ShoppingCartService) => {
+//     expect(service).toBeTruthy();
+//   }));
+// });
